@@ -1,0 +1,27 @@
+{
+  "name": "stocks-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dairito90/stocks-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dairito90/stocks-api/issues"
+  },
+  "homepage": "https://github.com/dairito90/stocks-api#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.8",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0"
+  }
+}
