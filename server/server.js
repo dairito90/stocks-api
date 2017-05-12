@@ -7,7 +7,7 @@ var PORT = 7576;
 var mongoose = require('mongoose');
 var Stock = require('../models/stocks');
 
-mongoose.connect('mongodb://drodriguez:j071312d@ds137271.mlab.com:37271/stocksMarket')
+mongoose.connect('mongodb://drodriguez:j071312d@ds137271.mlab.com:37271/stocksmarket')
 
 
 
@@ -21,10 +21,9 @@ app.post('/stocks', function(req, res){
       stockName: req.body.stockName ,
       stockSymbol:req.body.stockSymbol,
       stockPrice:req.body.stockPrice,
-      timeAndDateOfPrice:req.body.timeAndDateOfPrice,
-      marketInstrument:req.body.marketInstrument
+     stockDate:req.body.stockDate
   });
-  StockObj.save((err) => {
+  stockObj.save((err) => {
       if (err) {
           res.send(err);
       }
@@ -60,12 +59,10 @@ app.put('/stocks/:id', function(req, res){
      if (req.body.stockPrice) {
          stock.stockPrice= req.body.stockPrice;
      }
-     if (req.body.timeAndDateOfPrice) {
-         stock.timeAndDateOfPrice= req.body.timeAndDateOfPrice;
+     if (req.body.stockDate) {
+         stock.stockDate= req.body.stockDate;
      }
-     if (req.body.marketInstrument) {
-         stock.marketInstrument= req.body.marketInstrument;
-     }
+
 
      stock.save((err) => {
          if (err) {

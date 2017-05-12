@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Stcok Market</title>
+</head>
+
+<body>
+    <main>
+        <form name="stocks">
+            <div>
+                <h3>Stock Name</h3>
+                <input type="text" name="stock-name" required/>
+            </div>
+            <div>
+                <h3>Stock Symbol</h3>
+                <input type="text" name="stock-symbol">
+            </div>
+            <div>
+                <h3>Stock Price</h3>
+                <input type="number" name="stock-price" required/>
+            </div>
+            
+            <button>Submit</button>
+        </form>
+        <div class="content">
+            <ul class="stock-list"></ul>
+        </div>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
