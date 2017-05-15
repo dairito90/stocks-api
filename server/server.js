@@ -21,13 +21,13 @@ app.post('/stocks', function(req, res){
       stockName: req.body.stockName ,
       stockSymbol:req.body.stockSymbol,
       stockPrice:req.body.stockPrice,
-     stockDate:req.body.stockDate
+
   });
   stockObj.save((err) => {
       if (err) {
           res.send(err);
       }
-      res.json({message:'Stock created'});
+      res.json(stockObj);
   });
 });
 

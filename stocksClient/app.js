@@ -8,6 +8,7 @@ var stockTemplate =
 var stocks = [];
 
 var makeTemplate = function (data) {
+    // console.log(data);
     var li = document.createElement('li');
     var stockList = document.querySelector('.stock-list');
     var compiled = _.template(stockTemplate);
@@ -18,6 +19,7 @@ var makeTemplate = function (data) {
 
 var updatedStockList = function(){
     var stockData = stocks[stocks.length-1];
+    // console.log(stockData);
     makeTemplate(stockData);
 }
 
@@ -70,9 +72,10 @@ var getValues = function() {
 
             })
             .then(function(createdStock) {
+                console.log(createdStock);
                 stocks.push(createdStock);
 
-                // console.log(containers);
+
                 updatedStockList();
 
             })
